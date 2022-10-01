@@ -1,0 +1,83 @@
+@use "../base/" as *;
+
+.services {
+  .services-content {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+
+    &.reverse {
+      flex-direction: row-reverse;
+    }
+
+    .image {
+      height: 100%;
+
+      img {
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
+      }
+    }
+
+    .markting {
+      padding-left: 9rem;
+    }
+
+    .development,
+    .markting,
+    .creative {
+      header {
+        margin-bottom: 2rem;
+
+        h2 {
+          font-size: 3rem;
+          color: $main-color;
+        }
+
+        p {
+          color: $subtitle-heading-color;
+          font-size: $tewenty-p;
+          max-width: 25rem;
+        }
+      }
+
+      .services-grid {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(320px, 1fr));
+        gap: 2rem;
+
+        .grid-item {
+          h3 {
+            font-size: 1.1rem;
+            margin-block: 1rem 0.5rem;
+            color: $subtitle-heading-color;
+          }
+
+          p {
+            color: $paragraph-color;
+            max-width: 15rem;
+          }
+        }
+      }
+
+      .footer {
+        padding: $tewenty-p;
+        margin-top: $tewenty-p;
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+        color: $hover-color;
+
+        span,
+        img {
+          cursor: pointer;
+
+          &:hover {
+            color: $btn-bg-hover-color;
+          }
+        }
+      }
+    }
+  }
+}

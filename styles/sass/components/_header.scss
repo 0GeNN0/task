@@ -1,0 +1,53 @@
+@use "../base/" as *;
+
+.header {
+  height: 7rem;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  padding: $tewenty-p;
+  z-index: 10000000000;
+
+  &.bg-white {
+    background-color: white;
+    border-bottom: 1px solid $main-color;
+  }
+
+  .container {
+    @include flexIt(center, space-between);
+
+    .menu-icon {
+      display: none;
+
+      img {
+        width: 2rem;
+      }
+    }
+
+    .header-links {
+      display: flex;
+      align-items: center;
+      gap: 1.5rem;
+
+      ul {
+        display: contents;
+        list-style: none;
+        color: $main-color;
+        font-weight: bold;
+
+        li:hover {
+          color: $hover-color;
+          cursor: pointer;
+        }
+      }
+
+      .header-btn {
+        height: 2.25rem;
+        width: 6.5rem;
+        color: white;
+        border-radius: 1.125rem;
+        background-color: $main-color;
+      }
+    }
+  }
+}

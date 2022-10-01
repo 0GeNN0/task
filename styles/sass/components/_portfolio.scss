@@ -1,0 +1,88 @@
+@use "../base/" as *;
+
+.portfolio {
+  .section-heading {
+    margin-bottom: 0;
+
+    p {
+      color: $paragraph-color;
+      margin: 0 auto 1.5rem;
+      max-width: 38.75rem;
+    }
+  }
+
+  .work {
+    .filters {
+      margin-bottom: $forty-p;
+      text-align: center;
+      color: $main-color;
+
+      span {
+        margin-right: $ten-p;
+
+        &.active {
+          color: $btn-bg-color;
+        }
+      }
+    }
+
+    .work-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 3rem;
+
+      .img {
+        position: relative;
+        overflow: hidden;
+
+        img {
+          max-width: 100%;
+        }
+
+        &:hover {
+          .text {
+            bottom: 1rem;
+          }
+        }
+
+        .text {
+          position: absolute;
+          width: 100%;
+          color: white;
+          left: 0;
+          bottom: -30%;
+          text-align: center;
+          transition: 0.3s ease;
+
+          h2 {
+            margin-bottom: $tewenty-p;
+            font-size: 2rem;
+          }
+        }
+      }
+    }
+
+    .discover-btn {
+      width: 250px;
+      height: 40px;
+      background-color: white;
+      color: $hover-color;
+      @include flexIt(center, center);
+      gap: $ten-p;
+      margin: $forty-p auto 0;
+      border: 1px solid $hover-color;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: 0.3s ease;
+
+      &:hover {
+        background-color: $hover-color;
+        color: white;
+
+        svg path {
+          fill: white;
+        }
+      }
+    }
+  }
+}

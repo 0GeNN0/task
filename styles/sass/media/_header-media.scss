@@ -1,0 +1,45 @@
+@use "../base/" as *;
+
+@media (max-width: 62rem) {
+  .header .container {
+    .main-logo {
+      img {
+        max-width: 150px;
+      }
+    }
+  }
+}
+
+@media (max-width: 48rem) {
+  .header .container {
+    .menu-icon {
+      display: block;
+    }
+
+    .menu-icon:hover + .header-links,
+    .header-links:hover {
+      display: flex;
+    }
+
+    .header-links {
+      display: none;
+      flex-direction: column;
+      position: fixed;
+      width: 100%;
+      top: 80px;
+      left: 0;
+      background-color: $main-color;
+      font-size: 1rem;
+      padding: $tewenty-p;
+
+      ul {
+        color: white;
+      }
+
+      .header-btn {
+        background-color: white;
+        color: $main-color;
+      }
+    }
+  }
+}

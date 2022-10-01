@@ -1,0 +1,82 @@
+@use "../base/" as *;
+
+.landing {
+  min-height: 100vh;
+  background-image: linear-gradient(to right, white 55%, $secondary-color 45%);
+  animation: fade 0.5s ease-in;
+
+  .container {
+    @include flexIt(center, center);
+    padding-top: 305px;
+  }
+
+  .flex-item {
+    flex-basis: 50%;
+  }
+
+  .landing-text {
+    align-self: flex-start;
+    padding-top: 7.5rem;
+
+    h1 {
+      color: $main-color;
+      margin-bottom: 56px;
+      font-size: 3rem;
+    }
+
+    .landing-btn {
+      button {
+        width: 250px;
+        height: 48px;
+        background-color: $btn-bg-color;
+        color: white;
+        border-radius: 0.25rem;
+
+        &:hover {
+          background-color: $btn-bg-hover-color;
+        }
+      }
+    }
+  }
+
+  .landing-img {
+    display: flex;
+    align-items: flex-end;
+
+    .man-img {
+      width: 381px;
+
+      img {
+        max-width: 100%;
+        margin-bottom: -6px;
+      }
+    }
+
+    .godzilla-img {
+      padding-bottom: 2.5rem;
+      position: relative;
+      top: -0.75rem;
+
+      img:first-child {
+        width: 83px;
+        display: block;
+      }
+
+      img:last-child {
+        width: 57px;
+        position: absolute;
+        bottom: 0;
+        left: 90%;
+      }
+
+      &::before {
+        content: "Hi";
+        position: absolute;
+        left: 32px;
+        top: 12px;
+        color: white;
+        font-size: $tewenty-p;
+      }
+    }
+  }
+}

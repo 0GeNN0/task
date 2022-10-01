@@ -1,0 +1,91 @@
+@use "../base/" as *;
+
+.testmonials {
+  padding-bottom: 8rem;
+
+  .parent {
+    max-width: 62.5rem;
+    height: 16rem;
+    background-color: #e6ebf2;
+    padding: 2rem 4rem;
+    margin: auto;
+    border-radius: 0.5rem;
+
+    .carousel {
+      overflow-x: hidden;
+      height: 100%;
+
+      .slider {
+        display: flex;
+        height: 100%;
+        transition: 0.5s ease-in-out;
+
+        .testmonial {
+          min-width: 100%;
+          @include flexIt(center, space-between);
+          gap: 5.625rem;
+
+          .tm-body {
+            flex-grow: 1;
+            display: flex;
+            gap: 2rem;
+
+            .up {
+              align-self: flex-start;
+            }
+
+            .down {
+              align-self: flex-end;
+            }
+
+            .text {
+              flex-grow: 1;
+              color: $main-color;
+
+              .name {
+                color: #49c2d3;
+                margin-top: 12px;
+                font-size: 1.25rem;
+              }
+
+              .org {
+                font-size: 14px;
+                color: $paragraph-color;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .slider-btns {
+    padding-bottom: $fifty-p;
+    margin: 3.5rem auto 0;
+    width: max-content;
+    display: flex;
+    align-items: center;
+    gap: $ten-p;
+
+    img {
+      width: 1.5rem;
+      cursor: pointer;
+
+      &:first-child {
+        transform-origin: center center;
+        transform: rotate(180deg);
+      }
+    }
+
+    .dots {
+      display: contents;
+
+      span {
+        width: 10px;
+        height: 10px;
+        border-radius: 50%;
+        background-color: $btn-bg-color;
+      }
+    }
+  }
+}

@@ -1,0 +1,12 @@
+@keyframes fade {
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes moving-animation {
+  100% {
+    opacity: 1;
+    translate: 0;
+  }
+}

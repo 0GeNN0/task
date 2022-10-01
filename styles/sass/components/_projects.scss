@@ -1,0 +1,32 @@
+@use "../base/" as *;
+
+.projects {
+  padding-block: 4.5rem;
+  background-color: $main-color;
+
+  .container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 5rem;
+
+    .box {
+      display: flex;
+      align-items: center;
+      gap: 1.7rem;
+
+      .stats {
+        span {
+          color: $btn-bg-color;
+          font: {
+            size: 3rem;
+            weight: bold;
+          }
+        }
+
+        p {
+          color: white;
+        }
+      }
+    }
+  }
+}

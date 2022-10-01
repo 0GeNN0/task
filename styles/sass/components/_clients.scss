@@ -1,0 +1,11 @@
+@use "../base/" as *;
+
+.clients .container {
+  @include flexIt(center, center);
+  flex-wrap: wrap;
+  gap: 1.5rem;
+
+  img {
+    max-width: 8.75rem;
+  }
+}

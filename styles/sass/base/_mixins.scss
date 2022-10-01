@@ -1,0 +1,5 @@
+@mixin flexIt($vr-align, $hr-align) {
+  display: flex;
+  align-items: $vr-align;
+  justify-content: $hr-align;
+}

@@ -1,0 +1,25 @@
+@use "../base/" as *;
+
+@media (max-width: 1030px) {
+  .landing {
+    .landing-img .godzilla-img {
+      display: none;
+    }
+  }
+}
+
+@media (max-width: 48rem) {
+  .landing {
+    background-color: white;
+    background-image: none;
+
+    .landing-text {
+      flex-basis: 100%;
+      text-align: center;
+    }
+
+    .landing-img {
+      display: none;
+    }
+  }
+}
